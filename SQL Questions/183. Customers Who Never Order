@@ -57,20 +57,9 @@ Output:
 
 Answer :- 
 
-Solution 1 :-
 # Write your MySQL query statement below
 SELECT C.name AS Customers 
 FROM Customers AS C
 LEFT JOIN Orders AS O
 ON C.id = O.customerId
 WHERE O.customerId IS NULL ;
-
-Solution 2 :-
-# Write your MySQL query statement below
-SELECT name AS Customers 
-FROM Customers 
-WHERE name NOT IN
-        (SELECT C.name
-         FROM Customers AS C
-         INNER JOIN Orders AS O
-         ON C.id = O.customerId)
